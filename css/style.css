@@ -16,7 +16,8 @@
   --downnavBarColor: linear-gradient(-45deg, #e5312c 50%, #284686 100%);
 
   /* --navBarColorPhone : linear-gradient(5deg ,#E5312C 50%,#284686 100%,); */
-  --exploreTaglineColor: linear-gradient(65.5deg, #35e0e0 20%, #549191 100%);
+  --geniusName:  linear-gradient(65.5deg,  #31a9a9 0%, #4e8f8f 100%);
+  --exploreTaglineColor: linear-gradient(65.5deg, #ffffff 0%, #53e6e6 25%, #31a9a9 75%, #4e8f8f 100%);
   --geniusBlue: #284686;
   --geniusRed: #e5312c;
   --geniusGray: rgba(217, 210, 210, 0.531);
@@ -238,7 +239,7 @@ span a:hover {
 }
 
 .sec-text {
-  background: var(--exploreTaglineColor);
+  background: var(--geniusName);
   -webkit-background-clip: text;
   color: transparent;
   font-size: 5rem;
@@ -361,7 +362,7 @@ span a:hover {
 
   .heroGA .tagline {
     margin: 0.2rem;
-    max-width: a;
+    /* max-width: a; */
     font-size: 1.7rem;
     font-weight: 800;
   }
@@ -372,6 +373,25 @@ span a:hover {
   .sec-text {
     font-size: 2.5rem;
   }
+}
+
+
+@media screen and (min-width: 569px) and (max-width: 1330px) {
+  .heroTrophy .trophy{
+display: none;
+  }
+
+  .heroGA span > img {
+    width: 40rem;
+  }
+
+  .heroGA .tagline {
+    margin: 0.2rem;
+    /* max-width:a ; */
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
 }
 
 /* ===========================
@@ -456,19 +476,39 @@ span a:hover {
     font-size: 1.5rem;
     font-weight: 400;
   }
+
+  .formore h4 {
+    font-size: 1.5rem;
+  }
+  
+  
 }
 
-.formore h4 {
-  font-size: 1.5rem;
+
+@media screen and (min-width: 569px) and (max-width: 1330px) {
+  .aboutusImg img {
+    width: 45rem;
+    margin: 0;
+  }
+  .aboutusImg img:hover {
+    width: 31rem;
+  }
+
+  .aboutusContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
 }
-.downNavContainer {
-  display: none;
-}
+
 
 /* ===========================
         Down Nav for small Devices
 =========================== */
-
+.downNavContainer {
+  display: none;
+}
 @media screen and (max-width: 569px) {
   .downNavContainer {
     margin-top: 2rem;
@@ -593,7 +633,10 @@ span a:hover {
 }
 
 .containerTeachers {
-  margin-left: 22rem;
+  /* margin-left: 22rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .teachersLine {
   display: flex;
@@ -601,7 +644,7 @@ span a:hover {
   margin-left: 32%;
 }
 .teachersLine h3 {
-  background: var(--exploreTaglineColor);
+  background: var(--geniusName);
   -webkit-background-clip: text;
   font-size: 8rem;
   font-family: sans-serif;
@@ -621,23 +664,28 @@ span a:hover {
   color: transparent;
 }
 
+.teachers{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
 /* ======================================
           Teachers MEDIA QUERY
 ====================================== */
 
 @media screen and (max-width: 569px) {
   .teachersImg {
-    /* margin: 0; */
-    padding: 0;
-    margin-left: 3.5rem;
-    /* margin-right: 100%; */
     width: 35em;
     height: auto;
-    /* display: none; */
   }
 
   .containerTeachers {
-    margin-left: 2%;
+    /* margin-left: 2%; */
+    display: flex;
+
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -653,7 +701,174 @@ span a:hover {
   .linerow span {
     font-size: 2rem;
   }
+
+  .teachers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
 }
+
+@media screen and (min-width: 569px) and (max-width: 1330px) {
+  .teachersImg {
+    width: 55rem;
+    height: auto;
+  }
+
+  .containerTeachers {
+    /* margin-left: 2%; */
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .teachersLine {
+    
+    margin-left: 0%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .teachersLine h3 {
+    font-size: 5rem;
+  }
+  .linerow span {
+    font-size: 3rem;
+  }
+
+  .teachers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+}
+
+
+
+/* ======================================
+         Cources
+====================================== */
+.card img{
+  /* height: 20rem;
+  width: auto; */
+  /* display: none; */
+}
+
+.card{
+  /* background: #e5312c; */
+  height: 18rem;
+  width: 18rem;
+  border-radius: 50px;
+  box-shadow: 0.2rem 0.2rem 0.5rem black;
+  transition: 0.4s linear;
+}
+
+.card:hover{
+   padding: 0.5rem;
+}
+
+.top{
+  display: flex;
+  flex-direction: row;
+  gap: 20rem;
+  justify-content: center;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: row;
+  gap: 20rem;
+  justify-content: center;
+  margin-bottom: 7rem;
+
+}
+
+.courseDetails{
+  display: flex;
+  gap: 10rem;
+  flex-direction: column;
+}
+
+.courseTitle h3{
+  color: white;
+  font-size: 5rem;
+  font-weight: 800;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+  padding: 7rem;
+
+}
+
+.cources{
+  background: var(--exploreTaglineColor);
+
+}
+
+
+/* ======================================
+          Cources MEDIA QUERY
+====================================== */
+
+@media screen and (max-width: 569px) {
+
+  .courseTitle h3{
+    font-size: 3.5rem;
+    margin-bottom: 0;
+
+  }
+
+.card{
+  height: 20rem;
+  width: 20rem;
+}
+
+  .courseDetails,.top,.bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+}
+
+@media screen and (min-width: 569px) and (max-width: 1330px) {
+  .courseTitle h3{
+    font-size: 5rem;
+    margin-bottom: 0;
+
+  }
+
+.card{
+  height: 40rem;
+  width: 40rem;
+}
+
+  .courseDetails, .top , .bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  
+
+}
+
+
+
+
+
+
 /* ======================================
           Tablet UI MEDIA QUERY
 ====================================== */
@@ -662,3 +877,16 @@ span a:hover {
           NAVBAR MEDIA QUERY
 ====================================== */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
