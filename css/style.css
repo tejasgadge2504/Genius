@@ -1,0 +1,664 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navBarColor: linear-gradient(
+    45deg,
+    #ffffff 0%,
+    #e5312c 60%,
+    #284686 100%,
+    #ffffff
+  );
+
+  --downnavBarColor: linear-gradient(-45deg, #e5312c 50%, #284686 100%);
+
+  /* --navBarColorPhone : linear-gradient(5deg ,#E5312C 50%,#284686 100%,); */
+  --exploreTaglineColor: linear-gradient(65.5deg, #35e0e0 20%, #549191 100%);
+  --geniusBlue: #284686;
+  --geniusRed: #e5312c;
+  --geniusGray: rgba(217, 210, 210, 0.531);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===========================
+   Reusable CSS
+=========================== */
+.btn {
+  background: var(--geniusBlue);
+  width: 20rem;
+  height: 4rem;
+  display: flex;
+  gap: 1rem;
+  font-weight: 800;
+}
+
+p {
+  max-width: 65rem;
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  padding: 2rem;
+}
+
+/* ===========================
+    NavBar
+=========================== */
+.navbarSpan {
+  /* position: fixed; */
+}
+header {
+  height: auto;
+  display: flex;
+  top: 0;
+  background: var(--navBarColor);
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: fixed;
+  z-index: 5;
+}
+
+/* header{
+  position: fixed;
+  margin: 0;
+  
+} */
+
+/* .navC{
+  position: fixed;
+} */
+
+.logo img {
+  height: 10rem;
+  margin: 1rem;
+}
+
+.navbarContent {
+  font-size: 1.8rem;
+}
+
+.navbarContent a {
+  color: #ffffff;
+  margin: 0 2rem;
+  transition: 0.3s linear;
+  margin-top: 5rem;
+}
+
+.navbarContent a:hover {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+span p {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0;
+}
+.contact {
+  display: flex;
+  gap: 2rem;
+  margin-left: 1rem;
+  padding: 0;
+}
+span a {
+  text-decoration: none;
+  color: orange;
+  font-size: 1.7rem;
+  font-weight: 500;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+span a:hover {
+  color: #ffffff;
+}
+
+.email a,
+.call a {
+  color: #ffffff;
+}
+
+.email a,
+.call a:hover {
+  margin: 0;
+  color: orange;
+}
+
+/* ======================================
+          NAVBAR MEDIA QUERY
+====================================== */
+
+@media screen and (max-width: 569px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .logo img {
+    height: 5rem;
+    margin: 1rem;
+  }
+
+  .navbarContent a {
+    margin-left: 40px;
+    /* align-items: center; */
+    font-size: 2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .navbarContent a:hover {
+    font-size: 3.5rem;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  span a {
+    font-size: 1rem;
+    color: black;
+    margin-right: 3rem;
+  }
+  span p {
+    color: white;
+    font-size: 3rem;
+    margin-right: 3rem;
+  }
+
+  .email .mail,
+  .call .phone {
+    justify-content: start;
+    color: blueviolet;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+}
+
+/* ===========================
+        NAVBAR TABLET 
+=========================== */
+
+@media screen and (min-width: 569px) and (max-width: 1330px) {
+}
+
+/* ===========================
+        Hero
+=========================== */
+
+#Home {
+  /* position: relative;
+  top: 20rem; */
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+}
+
+.heroGA .tagline {
+  color: var(--geniusRed);
+  font-size: 2.5rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  margin-left: 15%;
+  /* position: relative;
+  left: 10rem;
+  bottom: 3rem; */
+}
+
+.exploreTagline {
+  /* background: var(--exploreTaglineColor);
+  -webkit-background-clip: text;
+  color: transparent; */
+  font-size: 4rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: black;
+  background: var(--downnavBarColor);
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.sec-text {
+  background: var(--exploreTaglineColor);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 5rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  position: relative;
+}
+
+.sec-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  border-left: 0.9rem solid #e5312c;
+  animation: heroNames 4s steps(12) infinite;
+}
+
+@keyframes heroNames {
+  40%,
+  60% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+#btnb {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.btnn {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  box-shadow: 5px 5px 5px;
+}
+
+.BE {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-1 {
+  background: var(--downnavBarColor);
+  color: #ffffff;
+  border: 1px solid red;
+  box-shadow: 5px 5px 5px black;
+}
+
+.btn-2 {
+  background: var(--exploreTaglineColor);
+  color: black;
+  border: 1px solid black;
+}
+
+#exploreTagline {
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  /* position: relative;
+  bottom: 20rem; */
+}
+
+.heroTrophy .trophy {
+  height: 50rem;
+  width: auto;
+  margin-bottom: 25rem;
+  border-radius: 4rem;
+  box-shadow: 10px 10px 15px var(--geniusBlue);
+  /* box-shadow: 5px 5px 5px; */
+}
+
+/* ======================================
+          Hero MEDIA QUERY
+====================================== */
+
+@media screen and (max-width: 569px) {
+  .btn {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    width: 40%;
+    font-weight: 500;
+    margin: 0 0.8rem;
+  }
+  .heroTrophy .trophy {
+    height: auto;
+    justify-content: center;
+    display: none;
+  }
+
+  .btnn {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    box-shadow: 5px 5px 5px;
+  }
+
+  /* .btn {
+    background-color: #ffffff;
+    width: 80%;
+    height: 4rem;
+    font-weight: 500;
+  } */
+
+  .heroGA span > img {
+    width: 30rem;
+  }
+
+  .heroGA .tagline {
+    margin: 0.2rem;
+    max-width: a;
+    font-size: 1.7rem;
+    font-weight: 800;
+  }
+  .exploreTagline {
+    font-size: 2rem;
+  }
+
+  .sec-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===========================
+       ABOUTUS
+=========================== */
+
+.aboutusContainer {
+  width: 100%;
+  background-color: var(--geniusGray);
+  box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.aboutusImg img {
+  width: 50rem;
+  border-radius: 3rem;
+  box-shadow: 10px 10px 8px var(--geniusBlue);
+  margin-left: 15%;
+  transition: 0.4s ease;
+}
+
+.aboutusImg img:hover {
+  width: 51rem;
+}
+
+.aboutus h2 {
+  margin: 1rem;
+  color: var(--geniusBlue);
+  font-size: 5rem;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+}
+
+.aboutus span {
+  color: var(--geniusRed);
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
+  margin-left: 10%;
+}
+
+.formore {
+  background: var(--downnavBarColor);
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  transition: 0.2s ease;
+}
+
+.formore h4 {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+/* ======================================
+          AboutUs MEDIA QUERY
+====================================== */
+
+@media screen and (max-width: 569px) {
+  .aboutusImg img {
+    width: 30rem;
+    margin: 0;
+  }
+  .aboutusImg img:hover {
+    width: 31rem;
+  }
+
+  .aboutus h2 {
+    margin-top: 3rem;
+  }
+  .aboutus span {
+    margin: 0rem;
+
+    font-size: 1.41rem;
+    font-weight: 800;
+  }
+
+  .aboutus p {
+    margin: 0;
+    max-width: 100%;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.formore h4 {
+  font-size: 1.5rem;
+}
+.downNavContainer {
+  display: none;
+}
+
+/* ===========================
+        Down Nav for small Devices
+=========================== */
+
+@media screen and (max-width: 569px) {
+  .downNavContainer {
+    margin-top: 2rem;
+    background: var(--downnavBarColor);
+    width: 90%;
+    height: 6rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    /* gap: 11%; */
+    position: fixed;
+    top: 88%;
+  }
+
+  .downNavElement {
+    /* border: 2px solid black; */
+    height: 8rem;
+    width: 8rem;
+    border-radius: 3rem;
+    padding-left: 2.5rem;
+    padding-top: 1.5rem;
+    font-size: 3rem;
+    color: white;
+    transition: 0.5s ease-in;
+  }
+
+  .downNavElement:active,
+  .downNavElement:hover {
+    background: var(--exploreTaglineColor);
+    padding-bottom: 2rem;
+  }
+}
+
+/* ======================================
+          Numbers
+====================================== */
+
+.numbers {
+  top: 20rem;
+  display: flex;
+  justify-content: space-evenly;
+  /* gap: 30%; */
+  background: var(--exploreTaglineColor);
+  height: 25rem;
+  align-items: center;
+}
+
+.Number {
+  font-size: 5rem;
+  font-weight: 700;
+  background: var(--downnavBarColor);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.dataName {
+  color: #ffffff;
+  font-size: 3rem;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.numberGrp {
+  display: flex;
+}
+
+.plus {
+  padding: 0px 10px;
+  /* margin: 0; */
+  font-size: 5rem;
+  background: var(--downnavBarColor);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
+}
+
+/* ======================================
+         Numbers MEDIA QUERY
+====================================== */
+
+@media screen and (max-width: 569px) {
+  .numbers {
+    gap: 1.5rem;
+  }
+
+  .Number {
+    font-size: 3rem;
+  }
+
+  .dataName {
+    font-size: 3rem;
+  }
+
+  .plus {
+    font-size: 3rem;
+  }
+}
+/* ======================================
+          Teachers
+====================================== */
+
+.Teacher {
+  background: var(--geniusGray);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.teachersImg {
+  margin-top: 10rem;
+  padding: 0;
+  /* margin-left: 20rem; */
+  align-items: center;
+  height: 40rem;
+  box-shadow: 2px 2px 15px 5px black;
+}
+
+.containerTeachers {
+  margin-left: 22rem;
+}
+.teachersLine {
+  display: flex;
+  gap: 1rem;
+  margin-left: 32%;
+}
+.teachersLine h3 {
+  background: var(--exploreTaglineColor);
+  -webkit-background-clip: text;
+  font-size: 8rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: transparent;
+}
+.linerow {
+  display: flex;
+  flex-direction: column;
+}
+.linerow span {
+  background: var(--downnavBarColor);
+  -webkit-background-clip: text;
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: transparent;
+}
+
+/* ======================================
+          Teachers MEDIA QUERY
+====================================== */
+
+@media screen and (max-width: 569px) {
+  .teachersImg {
+    /* margin: 0; */
+    padding: 0;
+    margin-left: 3.5rem;
+    /* margin-right: 100%; */
+    width: 35em;
+    height: auto;
+    /* display: none; */
+  }
+
+  .containerTeachers {
+    margin-left: 2%;
+    align-items: center;
+    justify-content: center;
+  }
+  .teachersLine {
+    margin-left: 0%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .teachersLine h3 {
+    font-size: 3rem;
+  }
+  .linerow span {
+    font-size: 2rem;
+  }
+}
+/* ======================================
+          Tablet UI MEDIA QUERY
+====================================== */
+@media screen and (min-width: 569px) and (max-width: 1330px) {
+  /* ======================================
+          NAVBAR MEDIA QUERY
+====================================== */
+}
