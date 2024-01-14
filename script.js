@@ -8,7 +8,7 @@ const textLoad = () => {
   }, 0);
 
   setTimeout(() => {
-    text.textContent = "JEE-ADV";
+    text.textContent = "JEE-Adv";
   }, 4000);
 
   setTimeout(() => {
@@ -20,22 +20,20 @@ const textLoad = () => {
   }, 12000);
 
   setTimeout(() => {
-    text.textContent = "BITS";
+    text.textContent = "HSC";
   }, 16000);
 
   setTimeout(() => {
-    text.textContent = "VIEEE";
+    text.textContent = "SSC";
   }, 20000);
 
-  setTimeout(() => {
-    text.textContent = "CUET";
-  }, 24000);
+  
 
 };
 
 
 textLoad();
-setInterval(textLoad, 28000);
+setInterval(textLoad, 24000);
 
 
 

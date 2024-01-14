@@ -25,8 +25,13 @@
     #4e8f8f 100%
   );
   --geniusBlue: #284686;
+  --blueOur: #5A88E5;
   --geniusRed: #e5312c;
   --geniusGray: rgba(217, 210, 210, 0.531);
+  --NumberBg: rgba(65.5deg,#53e6e6 0%,
+  #53e6e6 25%,
+  #31a9a9 75%,
+  #4e8f8f 100%)
 }
 
 html {
@@ -169,6 +174,7 @@ span a:hover {
     font-size: 2rem;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
+    font-family: 'Ubuntu', sans-serif;
   }
 
   .navbarContent a:hover {
@@ -189,6 +195,7 @@ span a:hover {
   span p {
     color: white;
     font-size: 3rem;
+    font-family: 'Ubuntu';
     margin-right: 3rem;
   }
 
@@ -225,15 +232,9 @@ span a:hover {
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
   margin-left: 15%;
-  /* position: relative;
-  left: 10rem;
-  bottom: 3rem; */
 }
 
 .exploreTagline {
-  /* background: var(--exploreTaglineColor);
-  -webkit-background-clip: text;
-  color: transparent; */
   font-size: 4rem;
   font-family: sans-serif;
   font-weight: 700;
@@ -281,6 +282,7 @@ span a:hover {
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  border: 2px solid whitesmoke;
 }
 
 .btnn {
@@ -289,7 +291,8 @@ span a:hover {
   border-radius: 2rem;
   font-size: 2.5rem;
   font-weight: 600;
-  box-shadow: 5px 5px 5px;
+  border: 1px solid whitesmoke;
+  /* box-shadow: 5px 5px 5px; */
 }
 
 .BE {
@@ -298,16 +301,16 @@ span a:hover {
 }
 
 .btn-1 {
-  background: var(--downnavBarColor);
-  color: #ffffff;
-  border: 1px solid red;
-  box-shadow: 5px 5px 5px black;
+  background: var(--blueOur);
+  color: white;
+ 
+  /* box-shadow: 5px 5px 5px black; */
 }
 
 .btn-2 {
-  background: var(--exploreTaglineColor);
-  color: black;
-  border: 1px solid black;
+  background: var(--blueOur);
+  color: white;
+  
 }
 
 #exploreTagline {
@@ -318,13 +321,18 @@ span a:hover {
   bottom: 20rem; */
 }
 
-.heroTrophy .trophy {
-  height: 50rem;
+.hero{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.heroImg img {
+  height: 60rem;
   width: auto;
-  margin-bottom: 25rem;
-  border-radius: 4rem;
-  box-shadow: 10px 10px 15px var(--geniusBlue);
-  /* box-shadow: 5px 5px 5px; */
+
 }
 
 /* ======================================
@@ -332,53 +340,43 @@ span a:hover {
 ====================================== */
 
 @media screen and (max-width: 569px) {
-  .btn {
-    display: flex;
-    gap: 1rem;
-    flex-direction: row;
-    width: 40%;
-    font-weight: 500;
-    margin: 0 0.8rem;
-  }
-  .heroTrophy .trophy {
-    height: auto;
-    justify-content: center;
-    display: none;
-  }
-
-  .btnn {
-    font-size: 2rem;
-    padding: 1rem 2rem;
-    border-radius: 2rem;
-    font-size: 2rem;
-    font-weight: 600;
-    box-shadow: 5px 5px 5px;
-  }
-
-  /* .btn {
-    background-color: #ffffff;
-    width: 80%;
-    height: 4rem;
-    font-weight: 500;
-  } */
-
-  .heroGA span > img {
-    width: 30rem;
-  }
-
-  .heroGA .tagline {
-    margin: 0.2rem;
-    /* max-width: a; */
-    font-size: 1.7rem;
-    font-weight: 800;
+  .heroImg img{
+    /* display: none; */
   }
   .exploreTagline {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .sec-text {
-    font-size: 2.5rem;
+   font-size: 3.5rem
   }
+#btnb{
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+}
+  .btnn{
+    
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    
+    font-weight: 500;
+    /* box-shadow: 5px 5px 5px; */
+  }
+
+  .hero{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  }
+
+  .heroImg img{
+    width: 40rem;
+    height: auto;
+  }
+
 }
 
 @media screen and (min-width: 569px) and (max-width: 1330px) {
@@ -411,7 +409,7 @@ span a:hover {
 .aboutusImg img {
   width: 50rem;
   border-radius: 3rem;
-  box-shadow: 10px 10px 8px var(--geniusBlue);
+  /* box-shadow: 10px 10px 8px var(--geniusBlue); */
   margin-left: 15%;
   transition: 0.4s ease;
 }
@@ -437,7 +435,7 @@ span a:hover {
 }
 
 .formore {
-  background: var(--downnavBarColor);
+  background-color:rgb(168, 93, 237) ;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
@@ -458,7 +456,8 @@ span a:hover {
 @media screen and (max-width: 569px) {
   .aboutusImg img {
     width: 30rem;
-    margin: 0;
+    margin: 0.5rem;
+
   }
   .aboutusImg img:hover {
     width: 31rem;
@@ -552,8 +551,9 @@ span a:hover {
   top: 20rem;
   display: flex;
   justify-content: space-evenly;
-  /* gap: 30%; */
-  background: var(--exploreTaglineColor);
+  gap: 30%;
+  background: var(--geniusBlue);
+  /* background-color: blueviolet; */
   height: 25rem;
   align-items: center;
 }
@@ -561,13 +561,14 @@ span a:hover {
 .Number {
   font-size: 5rem;
   font-weight: 700;
-  background: var(--downnavBarColor);
+  /* background-color: white; 
   -webkit-background-clip: text;
-  color: transparent;
+  color: transparent; */
+  color: white;
 }
 
 .dataName {
-  color: #ffffff;
+  color: white;
   font-size: 3rem;
   align-self: center;
   align-items: center;
@@ -584,9 +585,9 @@ span a:hover {
   padding: 0px 10px;
   /* margin: 0; */
   font-size: 5rem;
-  background: var(--downnavBarColor);
-  -webkit-background-clip: text;
-  color: transparent;
+  /* background: var(--downnavBarColor);
+  -webkit-background-clip: text; */
+  color: white;
   font-weight: 900;
 }
 
@@ -748,60 +749,114 @@ span a:hover {
 /* ======================================
          Cources
 ====================================== */
-.card img {
-  /* height: 20rem;
-  width: auto; */
-  /* display: none; */
-}
 
 .card {
-  /* background: #e5312c; */
-  height: 18rem;
-  width: 18rem;
-  border-radius: 50px;
-  box-shadow: 0.2rem 0.2rem 0.5rem black;
-  transition: 0.4s linear;
+  position: relative;
+  width: 20rem;
+  height: 1rem;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card img {
+  height: 300px;
+  width: 200px;
+  /* fill: #333; */
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover {
-  padding: 0.5rem;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
-.top {
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card-content {
+  transform: rotateX(0deg);
+}
+
+.card-title {
+  margin: 0;
+  font-size: 24px;
+  color: var(--geniusBlue);
+  font-weight: 700;
+  /* opacity: 50%; */
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card-description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: var(--geniusBlue);
+  opacity: 50%;
+  line-height: 1.4;
+}
+.pointer{
+  font-size: 2rem;
+}
+
+.top{
   display: flex;
   flex-direction: row;
   gap: 20rem;
   justify-content: center;
 }
 
-.bottom {
+.bottom{
   display: flex;
   flex-direction: row;
   gap: 20rem;
   justify-content: center;
   margin-bottom: 7rem;
+
 }
 
-.courseDetails {
+.courseDetails{
   display: flex;
   gap: 10rem;
   flex-direction: column;
 }
 
-.courseTitle h3 {
+.courseTitle h3{
   color: white;
   font-size: 5rem;
   font-weight: 800;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 4rem 0;
   padding: 7rem;
+
 }
 
-.cources {
-  background: var(--exploreTaglineColor);
+.cources{
+  background: var(--geniusBlue);
+  /* opacity: 50%; */
+
 }
 
 /* ======================================
@@ -875,7 +930,7 @@ span a:hover {
   align-items: center;
   /* margin: 4rem 0; */
   padding: 7rem;
-  background: var(--navBarColor);
+  background: var(--geniusRed);
   -webkit-background-clip: text;
   color: transparent;
 
@@ -916,11 +971,117 @@ span a:hover {
     align-items: center;
   }
 
+}
 
 
 
 
 
+
+
+
+
+
+/* ======================================
+         Footer
+====================================== */
+footer{
+  /* background: var(--navBarColor); */
+  background-color: #353232;
+  padding-top: 5rem;
+  margin-top: 20rem;
+  margin-bottom: 0px;
+  padding: 20px;
+}
+
+.logoFooter h3{
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-size: 4rem
+  
+}
+
+.first{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logoFooter > img{
+  position: relative;
+  right: 7rem;
+  width: auto;
+  height: 8rem;
+  filter: drop-shadow(0 0 1.89rem rgb(255, 255, 255));
+}
+
+.follow i{
+  color: white;
+  font-size: 2.8rem;
+}
+
+.follow{
+  display: flex;
+  gap: 15px;
+
+
+}
+
+.dataFooter{
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+
+}
+.second{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: start;
+  /* flex-direction: row; */
+  margin: 50px 200px ;
+  gap: 10rem;
+}
+
+.Footer1 a{
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+
+}
+
+.Footer1 h4{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+
+}
+
+.Footer1{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.branch img{
+  width: 50rem;
+  height: auto;
+  text-align: end;
+  left: 20rem;
+  justify-content: end;
+  align-self: center;
+  position: relative;
+  left: 11rem;
+  margin-bottom: 0px;
+}
+
+footer h3{
+  color: white;
+  
+}
 
 /* ======================================
           Tablet UI MEDIA QUERY
