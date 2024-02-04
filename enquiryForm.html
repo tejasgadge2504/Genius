@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry form</title>
+    <link  rel="stylesheet" href="./css/enquiry.css">
+    <link rel="website icon" type="png"  href="./images/nameLogo.png">
+
+</head>
+<body>
+
+    
+    <div class="container">
+    <h1>Admission Form</h1>
+    <p>Fill out this form with the required information</p>
+    <fieldset>
+        <form method="post" name="submit-to-google-sheet">
+        <label class="margin">Name of the Student : <input type="text" name="Student_Name" class="input" placeholder="Full Name" required></label>
+        <label class="margin">Contact No. (Home) <input  type="text" name="Phone_Number" id="num" class="input" placeholder="+91-" pattern="[0-9]{10}" inputmode="numeric" required ></label>
+        <label class="margin">Admission for Std :
+            <div class="radiobutton">
+            <label><input type="radio" class="std"  name="std"  required value="XI + XII JEE(M)">XI + XII JEE(M)</label>
+            <label><input type="radio"  class="std" name="std" required value="XI + XII NEET">XI + XII NEET </label>
+            <label><input type="radio" class="std" name="std" required value="XI + XII">XI + XII  </label>
+            <label><input type="radio" class="std" name="std" required value="10th"> 10th</label>
+            <label><input type="radio" class="std" name="std" required value="9th"> 9th</label>
+            <label><input type="radio" class="std" name="std" required value="8th"> 8th</label>
+        </div>
+        </label>
+        <label class="margin">Last School Name : <input type="text" name="School_Name" class="input" required></label>
+        <label class="margin">College : <input type="text" name="College_Name" class="input" required></label>
+        <div class="dropdown">
+        <label class="margin">Your City:
+            <div class="Dropdown">
+                <select id="city" name="city" size="1">
+                    <option value="Kalyan" required>    </option> 
+                    <option value="Kalyan" required>Kalyan</option>
+                    <option value="Badlapur" required>Badlapur</option>
+                    <option value="Ambernath" required>Ambernath</option>
+                    <option value="Ulhasnagar" required>Ulhasnagar</option>
+                    <option value="Dombivli" required>Dombivli</option>
+                  </select>
+            </div>
+        </label>
+    </div>
+        <input class="check" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="#">terms and conditions</a>
+      </label>
+      <div class="btn">
+      <button>
+        submit
+      <!-- <input type="submit" value="Submit" name="submit" class="button"/> -->
+    </button></div>
+</form>
+    </fieldset>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw8i1p-6UMDnZLd04RFQObB1VvAyZVe-HfxWFoU2JvB4HTJ7CKEoe1iu9nXxJDWtRwa/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert('Thanks for Contacting We will reach you Soon!!'),)
+        .catch(error => console.error('Error!', error.message))
+    })
+
+    let btnClear = document.querySelector('button');
+    let inputs = document.querySelectorAll('input');
+
+    btnClear.addEventListener('click',()=>{
+        inputs.forEach(input.value='')
+    });
+    
+  </script>
+</body>
+</html>
