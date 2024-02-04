@@ -1083,6 +1083,41 @@ footer h3{
   
 }
 
+
+/* ======================================
+          Take a Tour Media Query
+====================================== */
+
+@media screen and (max-width: 569px) {
+  .branch img{
+    height: 20rem;
+    width: auto;
+    left: 0px;
+    margin: 0;
+    bottom: 5rem;
+    /* display: none; */
+  }
+.first{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}
+
+.second,.dataFooter{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin: 3rem 1.8rem ;
+}
+
+}
+
+
+
+
 /* ======================================
           Tablet UI MEDIA QUERY
 ====================================== */
