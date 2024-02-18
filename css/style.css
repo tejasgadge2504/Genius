@@ -335,6 +335,10 @@ span a:hover {
 
 }
 
+.formore>h4{
+  text-decoration: none;
+}
+
 /* ======================================
           Hero MEDIA QUERY
 ====================================== */
@@ -858,6 +862,34 @@ span a:hover {
   /* opacity: 50%; */
 
 }
+.courseDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.courcesIMG{
+   width: 30rem;
+   transition: linear 0.3s ease-out;
+
+}
+.courcesIMG:hover{
+  width: 31rem;
+}
+.cources1{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 20rem;
+  
+}
+.cources2{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 20rem;
+  margin-bottom: 2rem;
+}
 
 /* ======================================
           Cources MEDIA QUERY
@@ -882,6 +914,10 @@ span a:hover {
     justify-content: center;
     align-items: center;
     gap: 3rem;
+  }
+  .cources1,.cources2{
+    flex-direction: column;
+    gap: 2rem;
   }
 }
 
@@ -1082,6 +1118,41 @@ footer h3{
   color: white;
   
 }
+
+
+/* ======================================
+          Take a Tour Media Query
+====================================== */
+
+@media screen and (max-width: 569px) {
+  .branch img{
+    height: 20rem;
+    width: auto;
+    left: 0px;
+    margin: 0;
+    bottom: 5rem;
+    /* display: none; */
+  }
+.first{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}
+
+.second,.dataFooter{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin: 3rem 1.8rem ;
+}
+
+}
+
+
+
 
 /* ======================================
           Tablet UI MEDIA QUERY
